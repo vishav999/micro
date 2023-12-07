@@ -1,0 +1,13 @@
+;16 bit div
+;not really tested
+org 100h
+jmp st
+num1 dw 1234h
+num2 db 42h
+quo db ?
+st:
+mov ax,num1
+mov bl,num2
+div bl
+mov quo,al
+hlt
